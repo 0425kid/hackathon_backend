@@ -1,11 +1,33 @@
-var express  = require('express');//import express NodeJS framework module
-var cors = require('cors');
-var app      = express();// create an object of the express module
+const express = require('express')
+const app = express()
 var http     = require('http').Server(app);// create a http web server using the http library
+const port = 8080
+
+var bodyParser = require('body-parser');
+var cors = require('cors');
+
+app.use(bodyParser.urlencoded({extended: true }));
+app.use(bodyParser.json());
+
 
 app.use(cors())
 
-var bodyParser = require('body-parser');
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+http.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+
+
+
+// //var path = require('path');
+
+
+
+
+// // var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true }));
 app.use(express.json());
 
@@ -15,7 +37,11 @@ app.use('/', router);
 var userRouter = require('./routes/users.js');
 app.use('/users', userRouter);
 
-http.listen(process.env.PORT ||8080, function(){
-	console.log('listening on *:8080');
-});
-console.log("------- server is running -------");
+var manageRouter = require('./routes/manage.js');
+app.use('/manage', manageRouter);
+
+app.set( 'views', __dirname + '/views' );  
+app.set('view engine' , 'pug');
+
+app.use('/img', express.static(__dirname + '/images'))
+app.use('/style', express.static(__dirname + '/style'))
