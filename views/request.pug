@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title=title
+  body
+    script.
+      function signrequest(userid, questid) {
+        alert(`${userid}가 ${questid}를 성공`);
+      }
+      function rejectrequest(userid, questid) {
+        alert(`${userid}가 ${questid}를 실패`);
+      }
+    h1 
+      a(href='/manage') 관리자 페이지
+    table(border='1')
+      tbody
+        tr
+          th 유저 아이디
+          th 퀘스트 종류
+          th 퀘스트 아이디
+          th 요청 내용
+          th 승인여부
+        -for (var index = 0; index < requests.length; index++)
+          tr
+            td #{requests[index].userid}
+            td #{requests[index].questcode}
+            td #{requests[index].questid}
+            td #{requests[index].description}
+            td 
+              button(onclick=`signrequest(${requests[index].userid}, ${requests[index].questid})`) 승인하기
+              button(onclick=`rejectrequest(${requests[index].userid}, ${requests[index].questid})`) 승인거부

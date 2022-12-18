@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>요청넣기</title>
+</head>
+<body>
+    <h2>퀘스트 승인 요청을 넣어보세요!</h2>
+    <form action="/manage/makerequests" method="post">
+        <p><input type="text" name="userid" placeholder="유저아이디"></p>
+        <p><input type="radio" name="questcode" value=1 checked>메인 퀘스트
+            <input type="radio" name="questcode" value=2 checked>주간 퀘스트
+            <input type="radio" name="questcode" value=3 checked>학과 퀘스트
+        </p>
+        <p><input type="text" name="questid" placeholder="퀘스트아이디"></p>
+        <p><textarea cols="50" rows="10" name="description" placeholder="요청 내용"></textarea></p>
+        <p>
+            <input type="submit" value="요청">
+        </p>
+    </form>
+</body>
+
+</html>

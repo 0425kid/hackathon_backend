@@ -1,0 +1,37 @@
+<html><head><title>주간 퀘스트 추가</title>
+    <style>
+        @import url(http://54.83.101.17:8080/style/stylesheet.css);
+        input[type="text"] {
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+<h1>주간 퀘스트 추가</h1>
+<form action="/manage/makeweeklyquest" method="post">
+    <input type="text" name="name" placeholder="퀘스트 이름">
+    <p><textarea name="description" placeholder="퀘스트 내용"></textarea></p>
+    <div class="difficulty">
+        <p id="dif">난이도 설정</p>
+        <div class="starpoint_wrap">
+            <div class="starpoint_box">
+                <label for="starpoint_1" class="label_star" title="1"><span class="blind">1점</span></label>
+                <label for="starpoint_2" class="label_star" title="2"><span class="blind">2점</span></label>
+                <label for="starpoint_3" class="label_star" title="3"><span class="blind">3점</span></label>
+                <label for="starpoint_4" class="label_star" title="4"><span class="blind">4점</span></label>
+                <label for="starpoint_5" class="label_star" title="5"><span class="blind">5점</span></label>
+                <input type="radio" name="starpoint" id="starpoint_1" class="star_radio" value="0">
+                <input type="radio" name="starpoint" id="starpoint_2" class="star_radio" value="1">
+                <input type="radio" name="starpoint" id="starpoint_3" class="star_radio" value="2">
+                <input type="radio" name="starpoint" id="starpoint_4" class="star_radio" value="3">
+                <input type="radio" name="starpoint" id="starpoint_5" class="star_radio" value="4">
+                <span class="starpoint_bg"></span>
+            </div>
+        </div>
+        <input type="submit" value="저장">
+    </div>
+</form>
+
+
+
+</body></html>

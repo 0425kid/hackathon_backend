@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title=title
+  body
+    h1 
+      a(href='/manage') 관리자 페이지
+    table(border='1')
+      tbody
+        tr
+          th 아이디
+          th 퀘스트 이름
+          th 퀘스트 내용
+          th 학과
+          th 난이도
+        -for (var index = 0; index < quests.length; index++)
+          tr
+            td #{quests[index].id}
+            td #{quests[index].questname}
+            td #{quests[index].description}
+            td #{quests[index].department}
+            td #{quests[index].difficulty}

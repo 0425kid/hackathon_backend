@@ -1,0 +1,108 @@
+<html><head><title>학과 퀘스트 추가</title>
+    <style>
+        @import url(http://54.83.101.17:8080/style/stylesheet.css);
+    </style>
+</head>
+<body>
+<h1>학과 퀘스트 추가</h1>
+<form action="/manage/makedeptquest" method="post">
+    <input type="text" name="name" placeholder="퀘스트 이름">
+    <select id="ddlDept" title="Dept" name="dept">
+        <option selected="selected" value="0">IBT학과</option>
+        <option value="1">ISE학과</option>
+        <option value="2">KLC학과</option>
+        <option value="3">간호학과</option>
+        <option value="4">건축학부</option>
+        <option value="5">경영학과</option>
+        <option value="6">경제학과</option>
+        <option value="7">고분자공학과</option>
+        <option value="8">공간정보공학과</option>
+        <option value="9">공과대학(FVE)</option>
+        <option value="10">교육학과</option>
+        <option value="11">국어교육과</option>
+        <option value="12">국제통상학과</option>
+        <option value="13">글로벌금융학과</option>
+        <option value="14">금융투자학과</option>
+        <option value="15">기계공학과</option>
+        <option value="16">데이터사이언스학과</option>
+        <option value="17">디자인융합학과</option>
+        <option value="18">디자인테크놀로지학과</option>
+        <option value="19">메카트로닉스공학과</option>
+        <option value="20">문화콘텐츠문화경영학과</option>
+        <option value="21">물리학과</option>
+        <option value="22">미디어커뮤니케이션학과</option>
+        <option value="23">바이오제약공학과</option>
+        <option value="24">사학과</option>
+        <option value="25">사회교육과</option>
+        <option value="26">사회복지학과</option>
+        <option value="27">사회인프라공학과</option>
+        <option value="28">산업경영공학과</option>
+        <option value="29">산업경영학과</option>
+        <option value="30">생명공학과</option>
+        <option value="31">생명과학과</option>
+        <option value="32">소비자학과</option>
+        <option value="33">소프트웨어융합공학과</option>
+        <option value="34">소프트웨어융합대학(SCSC)</option>
+        <option value="35">수학과</option>
+        <option value="36">수학교육과</option>
+        <option value="37">스마트모빌리티공학과</option>
+        <option value="38">스포츠과학과</option>
+        <option value="39">식품영양학과</option>
+        <option value="40">신소재공학과</option>
+        <option value="41">아동심리학과</option>
+        <option value="42">아태물류학부</option>
+        <option value="43">에너지자원공학과</option>
+        <option value="44">연극영화학과</option>
+        <option value="45">영어교육과</option>
+        <option value="46">영어영문학과</option>
+        <option value="47">의류디자인학과</option>
+        <option value="48">의예과</option>
+        <option value="49">의학과</option>
+        <option value="50">인공지능공학과</option>
+        <option value="51">일본언어문화학과</option>
+        <option value="52">전기공학과</option>
+        <option value="53">전자공학과</option>
+        <option value="54">정보통신공학과</option>
+        <option value="55">정치외교학과</option>
+        <option value="56">조선해양공학과</option>
+        <option value="57">조형예술학과</option>
+        <option value="58">중국학과</option>
+        <option value="59">철학과</option>
+        <option value="60">체육교육과</option>
+        <option value="61">컴퓨터공학과</option>
+        <option value="62">통계학과</option>
+        <option value="63">프랑스언어문화학과</option>
+        <option value="64">프런티어학부대학</option>
+        <option value="65">한국어문학과</option>
+        <option value="66">항공우주공학과</option>
+        <option value="67">해양과학과</option>
+        <option value="68">행정학과</option>
+        <option value="69">화학공학과</option>
+        <option value="70">화학과</option>
+        <option value="71">환경공학과</option>
+    </select>
+    <p><textarea name="description" placeholder="퀘스트 내용"></textarea></p>
+    <div class="difficulty">
+        <p id="dif">난이도 설정</p>
+        <div class="starpoint_wrap">
+            <div class="starpoint_box">
+                <label for="starpoint_1" class="label_star" title="1"><span class="blind">1점</span></label>
+                <label for="starpoint_2" class="label_star" title="2"><span class="blind">2점</span></label>
+                <label for="starpoint_3" class="label_star" title="3"><span class="blind">3점</span></label>
+                <label for="starpoint_4" class="label_star" title="4"><span class="blind">4점</span></label>
+                <label for="starpoint_5" class="label_star" title="5"><span class="blind">5점</span></label>
+                <input type="radio" name="starpoint" id="starpoint_1" class="star_radio" value="0">
+                <input type="radio" name="starpoint" id="starpoint_2" class="star_radio" value="1">
+                <input type="radio" name="starpoint" id="starpoint_3" class="star_radio" value="2">
+                <input type="radio" name="starpoint" id="starpoint_4" class="star_radio" value="3">
+                <input type="radio" name="starpoint" id="starpoint_5" class="star_radio" value="4">
+                <span class="starpoint_bg"></span>
+            </div>
+        </div>
+        <input type="submit" value="저장">
+    </div>
+</form>
+
+
+
+</body></html>
